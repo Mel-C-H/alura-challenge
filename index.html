@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextoDetective Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="paginaWeb__header">
+        <img class="paginaWeb__header__logo" src="./resources/Logo.png" alt="logo-alura">
+        <h1 class="paginaWeb__header__titulo">TextoDetective: <strong>¡Encripta y Descifra al Instante!</strong>
+        </h1>
+    </header>
+
+    <main class="paginaWeb__contenido">
+        <section class="paginaWeb__contenido__input__container">
+            <textarea class="paginaWeb__contenido__input__cuadro" placeholder="Ingrese el texto aqui..." id="txtEncriptar"></textarea>
+            <div class="paginaWeb__contenido__input__info__container">
+                    <div class="paginaWeb__contenido__input__info__cuadro">
+                        <img class="paginaWeb__contenido__input__info__icono" src="./resources/bi_exclamation-circle-fill.png" alt="signo de exclamacion">
+                        <p class="paginaWeb__contenido__input__info__texto">Sólo letras minúsculas y sin caracteres especiales.</p>
+                    </div>
+                    <div class="paginaWeb__contenido__input__botones__container">
+                        <button onclick="encriptarTexto()" class= "boton boton--primario">Encriptar</button>
+                        <button onclick="desencriptarTexto()" class="boton boton--secundario">Desencriptar</button>
+                    </div>   
+            </div>
+        </section>
+        <section class="paginaWeb__contenido__output__container">
+            <div class="paginaWeb__contenido__output__cuadro__container">
+                <textarea class="paginaWeb__contenido__output__cuadro" id="txtDesencriptar"></textarea>
+
+                <div id="txtAviso" class="paginaWeb__contenido__output__cuadro__texto">
+                    <h2 class="paginaWeb__contenido__output__cuadro__titulo">
+                        Ningún mensaje se ha encontrado.
+                    </h2>
+                    <p class="paginaWeb__contenido__output__cuadro__parrafo">
+                        Ingresa el texto que desees encriptar o descifrar.
+                    </p>
+                </div>
+                <div class="paginaWeb__contenido__output__boton_container">
+                <button onclick="copiarTexto()" class="boton boton--copiar" id="BtnCopiar">
+                    Copiar
+                </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer__container">
+        <div class="footer__texto">
+            <p>Desarrollado por: <span class="footer__texto__developer">Melqui Caicedo Hernandez</span></p>
+            <p>Email: <a href="mailto:terawatt9210@gmail.com" class="footer__texto__contacto">terawatt9210@gmail.com</a></p>
+            <p>&copy;Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="scrypt.js"></script>
+</body>
+</html>
